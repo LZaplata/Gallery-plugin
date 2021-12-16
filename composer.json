@@ -1,0 +1,8 @@
+{
+    "name": "lzaplata/gallery-plugin",
+    "type": "october-plugin",
+    "description": "Plugin for gallery management",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
