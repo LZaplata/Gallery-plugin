@@ -1,0 +1,15 @@
+columns:
+    name:
+        label: 'lzaplata.gallery::lang.column.name.label'
+        type: text
+        searchable: true
+        sortable: true
+    slug:
+        label: 'lzaplata.gallery::lang.column.slug.label'
+        type: text
+        searchable: true
+        sortable: true
+    created_at:
+        label: 'lzaplata.gallery::lang.column.created_at.label'
+        type: datetime
+        sortable: true

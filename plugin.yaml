@@ -1,0 +1,17 @@
+plugin:
+    name: 'lzaplata.gallery::lang.plugin.name'
+    description: 'lzaplata.gallery::lang.plugin.description'
+    author: 'Lukáš Záplata'
+    icon: oc-icon-picture-o
+    homepage: ''
+permissions:
+    all:
+        tab: 'lzaplata.gallery::lang.plugin.privilege.all.label'
+        label: 'lzaplata.gallery::lang.plugin.privilege.all.description'
+navigation:
+    main-menu-item:
+        label: 'lzaplata.gallery::lang.plugin.name'
+        url: lzaplata/gallery/gallery
+        icon: icon-picture-o
+        permissions:
+            - all

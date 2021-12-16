@@ -1,0 +1,29 @@
+fields:
+    name:
+        label: 'lzaplata.gallery::lang.field.name.label'
+        span: left
+        required: 1
+        type: text
+    slug:
+        label: 'lzaplata.gallery::lang.field.slug.label'
+        span: right
+        required: 1
+        preset:
+            field: name
+            type: slug
+        type: text
+    description:
+        label: 'lzaplata.gallery::lang.field.description.label'
+        size: ''
+        span: full
+        type: textarea
+    images:
+        label: 'lzaplata.gallery::lang.field.images.label'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+        comment: 'lzaplata.gallery::lang.field.images.description'

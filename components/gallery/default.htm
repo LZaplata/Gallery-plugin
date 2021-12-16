@@ -1,0 +1,16 @@
+<div id="{{ __SELF__ }}" class="gallery">
+    {% for image in __SELF__.gallery.images %}
+        <a href="{{ image.path }}" title="{{ image.description }}">
+            <img src="{{ image.path|resize(600, 600, { mode: 'crop' }) }}" alt="{{ image.title }}">
+        </a>
+    {% endfor %}
+</div>
+
+{% put scripts %}
+    <script>
+        lightGallery(document.getElementById("{{ __SELF__ }}"), {
+            plugins: [lgZoom, lgThumbnail],
+            speed: 500,
+        });
+    </script>
+{% endput %}

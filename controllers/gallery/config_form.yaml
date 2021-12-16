@@ -1,0 +1,17 @@
+name: Gallery
+modelClass: LZaplata\Gallery\Models\Gallery
+form: $/lzaplata/gallery/models/gallery/fields.yaml
+defaultRedirect: lzaplata/gallery/gallery
+create:
+    title: 'lzaplata.gallery::lang.create.title'
+    redirect: 'lzaplata/gallery/gallery/update/:id'
+    redirectClose: lzaplata/gallery/gallery
+    flashSave: 'lzaplata.gallery::lang.create.flash'
+update:
+    title: 'lzaplata.gallery::lang.update.title'
+    redirect: lzaplata/gallery/gallery
+    redirectClose: lzaplata/gallery/gallery
+    flashSave: 'lzaplata.gallery::lang.update.flash.update'
+    flashDelete: 'lzaplata.gallery::lang.update.flash.delete'
+preview:
+    title: ffff
