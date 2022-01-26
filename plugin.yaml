@@ -11,7 +11,7 @@ permissions:
 navigation:
     main-menu-item:
         label: 'lzaplata.gallery::lang.plugin.name'
-        url: lzaplata/gallery/gallery
+        url: lzaplata/gallery/galleries
         icon: icon-picture-o
         permissions:
             - all

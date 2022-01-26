@@ -1,7 +1,7 @@
 title: 'lzaplata.gallery::lang.plugin.name'
 modelClass: LZaplata\Gallery\Models\Gallery
 list: $/lzaplata/gallery/models/gallery/columns.yaml
-recordUrl: 'lzaplata/gallery/gallery/update/:id'
+recordUrl: 'lzaplata/gallery/galleries/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true
