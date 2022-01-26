@@ -5,13 +5,19 @@ plugin:
     icon: oc-icon-picture-o
     homepage: ''
 permissions:
-    all:
-        tab: 'lzaplata.gallery::lang.plugin.privilege.all.label'
-        label: 'lzaplata.gallery::lang.plugin.privilege.all.description'
+    default:
+        tab: 'lzaplata.gallery::lang.plugin.name'
+        label: 'lzaplata.gallery::lang.privilege.default'
+    gallery_create:
+        tab: 'lzaplata.gallery::lang.plugin.name'
+        label: 'lzaplata.gallery::lang.privilege.gallery.create'
+    gallery_delete:
+        tab: 'lzaplata.gallery::lang.plugin.name'
+        label: 'lzaplata.gallery::lang.privilege.gallery.delete'
 navigation:
     main-menu-item:
         label: 'lzaplata.gallery::lang.plugin.name'
         url: lzaplata/gallery/galleries
         icon: icon-picture-o
         permissions:
-            - all
+            - default

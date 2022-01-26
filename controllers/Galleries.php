@@ -11,7 +11,7 @@ class Galleries extends Controller
     public $formConfig = 'config_form.yaml';
 
     public $requiredPermissions = [
-        'all'
+        'default'
     ];
 
     public function __construct()

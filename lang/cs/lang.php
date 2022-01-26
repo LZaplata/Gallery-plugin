@@ -46,8 +46,15 @@
             'description' => 'Zobrazí vybranou galerii',
             'id' => [
                 'title' => 'Galerie',
-                'description' => 'Vyberte galerii ke zobrazení'
-            ]
-        ]
-    ]
+                'description' => 'Vyberte galerii ke zobrazení',
+            ],
+        ],
+    ],
+    'privilege' => [
+        'default' => 'Přístup k pluginu',
+        'gallery' => [
+            'create' => 'Vytváření galerií',
+            'delete' => 'Mazání galerií',
+        ],
+    ],
 ];
