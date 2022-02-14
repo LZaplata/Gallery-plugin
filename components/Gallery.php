@@ -43,9 +43,9 @@ class Gallery extends ComponentBase
     }
 
     /**
-     * @return GalleryModel
+     * @return GalleryModel|null
      */
-    public function gallery(): GalleryModel
+    public function gallery(): ?GalleryModel
     {
         if (is_numeric($this->property("id"))) {
             return GalleryModel::find($this->property("id"));
