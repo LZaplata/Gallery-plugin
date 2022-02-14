@@ -1,3 +1,5 @@
 1.0.1:
     - 'Created galleries table'
     - builder_table_create_lzaplata_gallery_galleries.php
+1.0.2:
+    - 'Finding gallery also by slug'
