@@ -26,9 +26,9 @@ class Gallery extends ComponentBase
     public function defineProperties(): array
     {
         return [
-            "id" => [
-                "title" => "lzaplata.gallery::lang.component.gallery.id.title",
-                "description" => "lzaplata.gallery::lang.component.gallery.id.description",
+            "gallery" => [
+                "title" => "lzaplata.gallery::lang.component.gallery.gallery.title",
+                "description" => "lzaplata.gallery::lang.component.gallery.gallery.description",
                 "type" => "dropdown"
             ]
         ];
@@ -37,21 +37,17 @@ class Gallery extends ComponentBase
     /**
      * @return array
      */
-    public function getIdOptions(): array
+    public function getGalleryOptions(): array
     {
-        return GalleryModel::orderBy("name", "asc")->lists("name", "id");
+        return GalleryModel::orderBy("name", "ASC")->lists("name", "slug");
     }
 
     /**
-     * @return GalleryModel|null
+     * @return GalleryModel
      */
-    public function gallery(): ?GalleryModel
+    public function gallery(): GalleryModel
     {
-        if (is_numeric($this->property("id"))) {
-            return GalleryModel::find($this->property("id"));
-        } else {
-            return GalleryModel::where("slug", $this->property("id"))->first();
-        }
+        return GalleryModel::where("slug", $this->property("gallery"))->first();
     }
 
     public function onRun(): void

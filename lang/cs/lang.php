@@ -44,7 +44,7 @@
         'gallery' => [
             'name' => 'Galerie',
             'description' => 'Zobrazí vybranou galerii',
-            'id' => [
+            'gallery' => [
                 'title' => 'Galerie',
                 'description' => 'Vyberte galerii ke zobrazení',
             ],

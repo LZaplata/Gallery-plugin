@@ -3,3 +3,5 @@
     - builder_table_create_lzaplata_gallery_galleries.php
 1.0.2:
     - 'Finding gallery also by slug'
+1.0.3:
+    - 'Change query in component to find gallery only by slug not ID'

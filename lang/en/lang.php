@@ -44,7 +44,7 @@
         'gallery' => [
             'name' => 'Gallery',
             'description' => 'Display chosen gallery',
-            'id' => [
+            'gallery' => [
                 'title' => 'Gallery',
                 'description' => 'Choose gallery to display',
             ],
