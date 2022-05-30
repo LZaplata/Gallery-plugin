@@ -5,3 +5,5 @@
     - 'Finding gallery also by slug'
 1.0.3:
     - 'Change query in component to find gallery only by slug not ID'
+1.1.0:
+    - 'Add gallery model translatable attributes'

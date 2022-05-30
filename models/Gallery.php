@@ -13,7 +13,6 @@ class Gallery extends Model
 
     protected $dates = ['deleted_at'];
 
-
     /**
      * @var string The database table used by the model.
      */
@@ -32,5 +31,21 @@ class Gallery extends Model
      */
     public $attachMany = [
         "images" => "System\Models\File"
+    ];
+
+    /**
+     * @var array
+     */
+    public $implement = [
+        "RainLab.Translate.Behaviors.TranslatableModel",
+    ];
+
+    /**
+     * @var array Translatable model attributes
+     */
+    public $translatable = [
+        "name",
+        "slug",
+        "description"
     ];
 }
