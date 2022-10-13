@@ -1,6 +1,7 @@
 <?php namespace LZaplata\Gallery\Models;
 
 use Model;
+use RainLab\Translate\Behaviors\TranslatableModel;
 
 /**
  * Model
@@ -37,7 +38,7 @@ class Gallery extends Model
      * @var array
      */
     public $implement = [
-        "RainLab.Translate.Behaviors.TranslatableModel",
+        "@" . TranslatableModel::class,
     ];
 
     /**
