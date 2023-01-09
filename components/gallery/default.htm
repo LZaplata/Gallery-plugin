@@ -1,10 +1,40 @@
+{% set images = __SELF__.images %}
+
 <div id="{{ __SELF__ }}" class="gallery">
-    {% for image in __SELF__.gallery.images %}
+    {% for image in images %}
         <a href="{{ image.path }}" title="{{ image.description }}">
             <img src="{{ image.path|resize(600, 600, { mode: 'crop' }) }}" alt="{{ image.title }}">
         </a>
     {% endfor %}
 </div>
+
+{% if images.lastPage > 1 %}
+    <ul class="pagination">
+        {% if posts.currentPage > 1 %}
+            <li class="page-item prev">
+                <a href="{{ this.page.baseFileName|page({page: (images.currentPage-1)}) }}" class="page-link">
+                    &larr; Prev
+                </a>
+            </li>
+        {% endif %}
+
+        {% for page in 1..images.lastPage %}
+            <li class="page-item">
+                <a href="{{ this.page.baseFileName|page({page: page}) }}" class="{{ images.currentPage == page ? 'active' : null }}">
+                    {{ page }}
+                </a>
+            </li>
+        {% endfor %}
+
+        {% if images.lastPage > images.currentPage %}
+            <li class="page-item next">
+                <a href="{{ this.page.baseFileName|page({page: (images.currentPage+1)}) }}" class="page-link">
+                    Next &rarr;
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+{% endif %}
 
 {% put scripts %}
     <script>

@@ -5,6 +5,7 @@ namespace LZaplata\Gallery\Components;
 
 
 use Cms\Classes\ComponentBase;
+use Illuminate\Pagination\LengthAwarePaginator;
 use LZaplata\Gallery\Models\Gallery as GalleryModel;
 
 class Gallery extends ComponentBase
@@ -27,10 +28,17 @@ class Gallery extends ComponentBase
     {
         return [
             "gallery" => [
-                "title" => "lzaplata.gallery::lang.component.gallery.gallery.title",
-                "description" => "lzaplata.gallery::lang.component.gallery.gallery.description",
-                "type" => "dropdown"
-            ]
+                "title"         => "lzaplata.gallery::lang.component.gallery.gallery.title",
+                "description"   => "lzaplata.gallery::lang.component.gallery.gallery.description",
+                "type"          => "dropdown"
+            ],
+            "imagesPerPage" => [
+                "title"             => "lzaplata.gallery::lang.component.gallery.images_per_page.title",
+                "type"              => "string",
+                "default"           =>  15,
+                "validationPattern" => "^[0-9]+$",
+                "validationMessage" => "lzaplata.gallery::lang.component.gallery.images_per_page.validation.message",
+            ],
         ];
     }
 
@@ -43,11 +51,15 @@ class Gallery extends ComponentBase
     }
 
     /**
-     * @return GalleryModel
+     * @return LengthAwarePaginator|null
      */
-    public function gallery(): GalleryModel
+    public function images(): ?LengthAwarePaginator
     {
-        return GalleryModel::where("slug", $this->property("gallery"))->first();
+        return GalleryModel::where("slug", $this->property("gallery"))
+            ->first()
+            ->images()
+            ->paginate($this->property("imagesPerPage"), $this->param("page"));
+
     }
 
     public function onRun(): void

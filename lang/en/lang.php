@@ -48,6 +48,12 @@
                 'title' => 'Gallery',
                 'description' => 'Choose gallery to display',
             ],
+            'images_per_page' => [
+                'title' => 'Images per page',
+                'validation' => [
+                    'message' => 'Wrong format, number have to be filled',
+                ],
+            ],
         ],
     ],
     'privilege' => [

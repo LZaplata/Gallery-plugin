@@ -48,6 +48,12 @@
                 'title' => 'Galerie',
                 'description' => 'Vyberte galerii ke zobrazení',
             ],
+            'images_per_page' => [
+                'title' => 'Obrázků na stránku',
+                'validation' => [
+                    'message' => 'Špatný formát, musí být zadáno číslo',
+                ],
+            ],
         ],
     ],
     'privilege' => [

@@ -9,3 +9,5 @@
     - 'Add gallery model translatable attributes'
 1.1.1:
     - 'Fix throwing error when Rainlab.Translate plugin is not installed'
+1.2.0:
+    - 'Gallery images pagination'
